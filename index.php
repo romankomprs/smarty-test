@@ -1,6 +1,7 @@
 <?php
 require_once('smarty-3.1.32/libs/Smarty.class.php');
 
+// create object
 $smarty = new Smarty();
 $smarty->template_dir = 'views';
 $smarty->compile_dir = 'tmp';
@@ -27,7 +28,11 @@ $smarty->assign('myColors', $arr);
 $people = array('fname' => 'John', 'lname' => 'Doe', 'email' => 'j.doe@example.com');
 $smarty->assign('myPeople', $people);
 
+// assign some content 
+$smarty->assign('name', 'george smith');
+$smarty->assign('address', '45th & Harris St.');
 
 
+// display it
 $smarty->display('index.tpl');
 

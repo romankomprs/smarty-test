@@ -32,9 +32,33 @@ Hello
 		{$k} = {$value} <br/>
 	{/foreach}
 -->
-
+{*  I am a smarty commetn, I don't exist in the compield output 
 <!-- THIS CODE IS DEPRICATED and unsafe!!!!
 {php}
 	echo 1;
 {/php}
 -->
+*}
+
+
+
+<pre>
+User Information:
+
+Name: {$name}
+Address: {$address}
+
+</pre>
+
+<h3>Alternation of the assign content</h3>
+<pre>
+Name: {$name|capitalize}
+Addr: {$address|escape}
+Date: {$smarty.now|date_format: "%A %D, %Y"}
+Month: {$smarty.now|date_format:"%c"}
+
+{$smarty.now|date_format:"%d.%m.%Y"}
+
+</pre>
+
+{* include file="footer.tpl" *}
